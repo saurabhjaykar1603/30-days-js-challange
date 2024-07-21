@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Element</title>
+  </head>
+  <body>
+    <!-- Task 5: Select an HTML element and remove it from the DOM.
+      -->
+    <h1>Remove Element</h1>
+    <script>
+      const element = document.querySelector("h1");
+      element.remove();
+    </script>
+    <!-- • Task 6: Remove the last child of a specific HTML element. -->
+    <h1>Remove Last Child <span>Span Element</span></h1>
+    <script>
+      const element2 = document.querySelector("h1");
+      if (element2.lastChild) {
+        element2.removeChild(element2.lastChild);
+      }
+    </script>
+  </body>
+</html>

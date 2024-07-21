@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 5: Event Handling</title>
+  </head>
+  <body>
+    <h1>Activity 5: Event Handling</h1>
+    <!-- Task 9: Add a click event listener to a button that changes the text content of a paragraph. -->
+    <button id="btn">Click Me!</button>
+    <p id="para">This is a paragraph.</p>
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        document.getElementById("para").innerHTML = "You clicked the button!";
+      });
+    </script>
+    <!-- • Task 10: Add a mouseover event listener to an element that changes its border color. -->
+    <div id="div">Hover over me!</div>
+    <script>
+      const div = document.getElementById("div");
+      div.addEventListener("mouseover", function () {
+        div.style.border = "2px solid red";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1: Selecting and Manipulating Elements</title>
+  </head>
+  <body>
+    <!-- • Task 1: Select an HTML element by its ID and change its text content. -->
+    <h1 id="title">Hello World</h1>
+    <script>
+      const title = document.getElementById("title");
+      title.textContent = "Saurabh Jaykar";
+    </script>
+    Task 2: Select an HTML element by its class and change its background color.
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+      </p>
+    </div>
+    <script>
+      const box = document.getElementsByClassName("box");
+      box[0].style.backgroundColor = "red";
+    </script>
+  </body>
+</html>
