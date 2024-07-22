@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1: Basic Event Handling</title>
+  </head>
+  <body>
+    Task 1: Add a click event listener to a button that changes the text content of a paragraph.
+    <button id="btn">Click Me!</button>
+    <p id="para">This is a paragraph.</p>
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        document.getElementById("para").innerHTML = "You clicked the button!";
+      });
+    </script><hr>
+
+    Task 2: Add a double-click event listener to an image that toggles its visibility.
+    <img src="https://via.placeholder.com/150   " alt="placeholder" id="img" />
+    <button id="toggleButton">Double Click Me</button>
+
+    <script>
+      const img = document.getElementById("img");
+      const button = document.getElementById("toggleButton");
+
+      button.addEventListener("dblclick", function () {
+        if (img.style.visibility === "hidden") {
+          img.style.visibility = "visible";
+        } else {
+          img.style.visibility = "hidden";
+        }
+      });
+    </script>
+  </body>
+</html>

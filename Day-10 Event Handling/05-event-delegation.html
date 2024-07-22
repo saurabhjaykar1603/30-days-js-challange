@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 5: Event Delegation</title>
+  </head>
+  <body>
+    Task 9: Add a click event listener to a list that logs the text content of
+    the clicked list item using event delegation.
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <script>
+      const list = document.getElementById("list");
+      list.addEventListener("click", (e) => {
+        console.log(e.target.textContent);
+      });
+    </script>
+
+    <hr>
+    Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.
+    <button id="add">Add</button>
+    <ul id="list2">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <script>
+        const list2 = document.getElementById("list2");
+        const add = document.getElementById("add");
+        add.addEventListener("click", () => {
+            const li = document.createElement("li");
+            li.textContent = "Item 5";
+            list2.appendChild(li);
+            });
+    </script>
+  </body>
+</html>

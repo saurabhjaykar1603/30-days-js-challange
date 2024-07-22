@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 3: Keyboard Events</title>
+  </head>
+  <body>
+    Task 5: Add a keydown event listener to an input field that logs the key pressed to the console.
+    <input type="text" id="input" />
+    <script>
+      document
+        .getElementById("input")
+        .addEventListener("keydown", function (event) {
+          if (event.key === " ") {
+            console.log("Space key pressed");
+          } else {
+            console.log(`Key pressed: ${event.key}`);
+          }
+        });
+    </script>
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    Task 6: Add a keyup event listener to an input field that displays the current value in a paragraph.
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="displayText">Current value: </p>
+    <script>
+        // Get references to the input field and the paragraph
+        const inputField = document.getElementById('inputField');
+        const displayText = document.getElementById('displayText');
+
+        // Add a keyup event listener to the input field
+        inputField.addEventListener('keyup', function() {
+            // Update the paragraph text with the current input value
+            displayText.textContent = 'Current value: ' + inputField.value;
+        });
+    </script>
+  </body>
+</html>
